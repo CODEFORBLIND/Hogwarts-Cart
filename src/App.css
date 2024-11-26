@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+input {
+    flex: 1; /* Allows input to take up remaining space */
+    padding: 15px;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px; /* Adjusts max width for layout */
+    margin-block: 2rem;
+}
+
+button {
+    padding: 15px;
+}
+
+.element {
+    margin-block: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Set four cards per row */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limits grid width on large screens */
+}
+
+@media (max-width: 1200px) {
+    .element {
+        grid-template-columns: repeat(3, 1fr); /* Three cards per row on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .element {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .element {
+        grid-template-columns: 1fr; /* One card per row on very small screens */
+    }
+}
+
+.element img {
+    max-width: 100%;
+    height: auto;
+}
+
+.element-div {
+    border: 3px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto; /* Adjust height based on content */
+}
+
+p {
+    margin: 10px auto;
+}
